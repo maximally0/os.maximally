@@ -40,11 +40,11 @@ const InternPad = () => {
   return (
     <div className="min-h-screen pb-20">
       <div className="container mx-auto px-4 pt-8">
-        <h1 className="font-pixel text-4xl md:text-5xl text-center mb-8 gradient-text">
+        <h1 className="font-pixel text-4xl md:text-5xl text-center mb-8 text-gray-900">
           🎯 InternPad
         </h1>
         
-        <p className="text-center text-gray-300 mb-12 max-w-2xl mx-auto">
+        <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
           Discover internship opportunities at startups that value young talent and fresh perspectives.
         </p>
 
@@ -53,15 +53,15 @@ const InternPad = () => {
             <PixelCard key={internship.id} glowColor="pink">
               <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
                 <div className="lg:col-span-2">
-                  <h3 className="font-pixel text-xl text-neon-pink mb-2">{internship.role}</h3>
-                  <h4 className="text-neon-blue font-pixel text-lg mb-3">{internship.company}</h4>
-                  <p className="text-gray-300 mb-4">{internship.description}</p>
+                  <h3 className="font-pixel text-xl text-purple-600 mb-2">{internship.role}</h3>
+                  <h4 className="text-blue-600 font-pixel text-lg mb-3">{internship.company}</h4>
+                  <p className="text-gray-700 mb-4">{internship.description}</p>
                   
                   <div className="flex flex-wrap gap-2 mb-4">
                     {internship.skills.map((skill) => (
                       <span 
                         key={skill}
-                        className="px-2 py-1 bg-dark-bg text-neon-green text-xs font-pixel border border-neon-green"
+                        className="px-2 py-1 bg-gray-100 text-green-600 text-xs font-pixel border border-gray-300"
                       >
                         {skill}
                       </span>
@@ -72,17 +72,17 @@ const InternPad = () => {
                 <div className="flex flex-col justify-between">
                   <div className="space-y-2 mb-4">
                     <div className="text-sm">
-                      <span className="text-gray-400">Location:</span> 
-                      <span className="text-white ml-1">{internship.location}</span>
+                      <span className="text-gray-500">Location:</span> 
+                      <span className="text-gray-900 ml-1">{internship.location}</span>
                     </div>
                     <div className="text-sm">
-                      <span className="text-gray-400">Type:</span> 
-                      <span className="text-neon-green ml-1 font-pixel">{internship.type}</span>
+                      <span className="text-gray-500">Type:</span> 
+                      <span className="text-green-600 ml-1 font-pixel">{internship.type}</span>
                     </div>
                   </div>
                   
                   <PixelButton 
-                    variant="neon-pink"
+                    variant="accent"
                     href={internship.applyLink}
                   >
                     Apply Now
@@ -95,13 +95,13 @@ const InternPad = () => {
 
         <div className="text-center mt-12">
           <PixelCard className="max-w-2xl mx-auto" glowColor="blue">
-            <h3 className="font-pixel text-2xl text-neon-blue mb-4">
+            <h3 className="font-pixel text-2xl text-blue-600 mb-4">
               🚀 Want to Post an Internship?
             </h3>
-            <p className="text-gray-300 mb-6">
+            <p className="text-gray-700 mb-6">
               Are you a startup looking for ambitious teen talent? We'd love to feature your opportunities.
             </p>
-            <PixelButton variant="neon-blue" href="mailto:internships@maximally.in">
+            <PixelButton variant="primary" href="mailto:internships@maximally.in">
               Contact Us
             </PixelButton>
           </PixelCard>
