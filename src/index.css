@@ -39,50 +39,112 @@
   body {
     @apply bg-dark-bg text-foreground font-sans;
     background-image: 
-      radial-gradient(circle at 25% 25%, rgba(0, 245, 255, 0.1) 0%, transparent 50%),
-      radial-gradient(circle at 75% 75%, rgba(57, 255, 20, 0.1) 0%, transparent 50%);
+      radial-gradient(circle at 25% 25%, rgba(0, 245, 255, 0.15) 0%, transparent 50%),
+      radial-gradient(circle at 75% 75%, rgba(57, 255, 20, 0.15) 0%, transparent 50%),
+      radial-gradient(circle at 50% 50%, rgba(255, 20, 147, 0.1) 0%, transparent 50%);
     min-height: 100vh;
+    overflow-x: hidden;
   }
 }
 
 @layer components {
   .pixel-button {
-    @apply font-pixel text-lg px-6 py-3 border-2 border-current transition-all duration-200 hover:scale-105 hover:shadow-lg;
+    @apply font-pixel text-lg px-6 py-3 border-4 border-current transition-all duration-300 hover:scale-110 hover:shadow-lg transform;
     text-transform: uppercase;
-    letter-spacing: 2px;
+    letter-spacing: 3px;
+    animation: pixel-glow 2s ease-in-out infinite;
   }
 
   .neon-button {
     @apply pixel-button bg-transparent hover:bg-current hover:text-dark-bg;
-    animation: pixel-glow 2s ease-in-out infinite;
+    animation: pixel-glow 2s ease-in-out infinite, chaos-shake 3s ease-in-out infinite;
   }
 
   .pixel-card {
-    @apply bg-dark-card border-2 border-dark-border p-6 transition-all duration-300 hover:border-neon-blue hover:shadow-lg;
+    @apply bg-dark-card border-4 border-dark-border p-6 transition-all duration-300 hover:border-neon-blue hover:shadow-lg transform hover:scale-105;
+    animation: subtle-float 4s ease-in-out infinite;
   }
 
   .gradient-text {
-    background: linear-gradient(45deg, #00f5ff, #39ff14, #ff1493);
+    background: linear-gradient(45deg, #00f5ff, #39ff14, #ff1493, #bf00ff);
+    background-size: 400% 400%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    animation: rainbow-flow 3s ease-in-out infinite;
   }
 }
 
-/* Custom scrollbar */
+/* CHAOTIC ANIMATIONS */
+@keyframes pixel-glow {
+  0%, 100% {
+    box-shadow: 0 0 10px currentColor;
+    filter: brightness(1);
+  }
+  50% {
+    box-shadow: 0 0 30px currentColor, 0 0 50px currentColor;
+    filter: brightness(1.2);
+  }
+}
+
+@keyframes chaos-shake {
+  0%, 100% { transform: translateX(0) rotate(0deg); }
+  10% { transform: translateX(-2px) rotate(1deg); }
+  20% { transform: translateX(2px) rotate(-1deg); }
+  30% { transform: translateX(-2px) rotate(1deg); }
+  40% { transform: translateX(2px) rotate(-1deg); }
+  50% { transform: translateX(-2px) rotate(1deg); }
+  60% { transform: translateX(2px) rotate(-1deg); }
+  70% { transform: translateX(-2px) rotate(1deg); }
+  80% { transform: translateX(2px) rotate(-1deg); }
+  90% { transform: translateX(-2px) rotate(1deg); }
+}
+
+@keyframes rainbow-flow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes subtle-float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  25% { transform: translateY(-5px) rotate(1deg); }
+  50% { transform: translateY(0px) rotate(0deg); }
+  75% { transform: translateY(-3px) rotate(-1deg); }
+}
+
+@keyframes explosion-pulse {
+  0% { 
+    transform: scale(1);
+    box-shadow: 0 0 0 0 currentColor;
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px 10px transparent;
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 transparent;
+  }
+}
+
+/* Custom scrollbar - NEON STYLE */
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 12px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #1a1a1a;
+  background: #0a0a0a;
+  border: 2px solid #2a2a2a;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #00f5ff;
-  border-radius: 4px;
+  background: linear-gradient(45deg, #00f5ff, #39ff14);
+  border-radius: 0;
+  border: 2px solid #0a0a0a;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #39ff14;
+  background: linear-gradient(45deg, #ff1493, #bf00ff);
+  box-shadow: 0 0 20px rgba(255, 20, 147, 0.5);
 }

@@ -19,13 +19,13 @@ const PixelButton = ({
   href,
   className 
 }: PixelButtonProps) => {
-  const baseClasses = "pixel-button font-pixel inline-flex items-center justify-center transition-all duration-200 hover:scale-105";
+  const baseClasses = "pixel-button font-pixel inline-flex items-center justify-center transition-all duration-300 hover:scale-110 transform border-4 font-bold uppercase tracking-wider";
   
   const variantClasses = {
-    'neon-blue': 'text-neon-blue border-neon-blue hover:bg-neon-blue hover:text-black hover:shadow-[0_0_20px_rgba(0,245,255,0.5)]',
-    'neon-green': 'text-neon-green border-neon-green hover:bg-neon-green hover:text-black hover:shadow-[0_0_20px_rgba(57,255,20,0.5)]',
-    'neon-pink': 'text-neon-pink border-neon-pink hover:bg-neon-pink hover:text-black hover:shadow-[0_0_20px_rgba(255,20,147,0.5)]',
-    'outline': 'text-white border-gray-400 hover:bg-white hover:text-black'
+    'neon-blue': 'text-neon-blue border-neon-blue hover:bg-neon-blue hover:text-black hover:shadow-[0_0_40px_rgba(0,245,255,0.8)] bg-black/80 backdrop-blur-sm',
+    'neon-green': 'text-neon-green border-neon-green hover:bg-neon-green hover:text-black hover:shadow-[0_0_40px_rgba(57,255,20,0.8)] bg-black/80 backdrop-blur-sm',
+    'neon-pink': 'text-neon-pink border-neon-pink hover:bg-neon-pink hover:text-black hover:shadow-[0_0_40px_rgba(255,20,147,0.8)] bg-black/80 backdrop-blur-sm',
+    'outline': 'text-white border-white hover:bg-white hover:text-black hover:shadow-[0_0_40px_rgba(255,255,255,0.8)] bg-black/80 backdrop-blur-sm'
   };
 
   const sizeClasses = {
