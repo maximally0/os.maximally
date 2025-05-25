@@ -1,0 +1,36 @@
+
+[
+  {
+    "id": 1,
+    "title": "AI Study Buddy",
+    "description": "Machine learning app that helps students create personalized study plans and quiz themselves",
+    "image": "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=600&h=400&fit=crop",
+    "youtubeId": "dQw4w9WgXcQ",
+    "tags": ["AI", "Education", "React"],
+    "creator": "Alex Chen",
+    "instagram": "alexcodes",
+    "github": "alexchen/ai-study-buddy"
+  },
+  {
+    "id": 2,
+    "title": "EcoTracker",
+    "description": "Mobile app tracking carbon footprint with gamification elements to encourage sustainable living",
+    "image": "https://images.unsplash.com/photo-1472396961693-142e6e269027?w=600&h=400&fit=crop",
+    "youtubeId": "dQw4w9WgXcQ",
+    "tags": ["Climate", "Mobile", "Gamification"],
+    "creator": "Maya Patel",
+    "instagram": "mayabuilds",
+    "website": "ecotracker.app"
+  },
+  {
+    "id": 3,
+    "title": "Teen Mental Health Hub",
+    "description": "Platform connecting teenagers with peer support and mental health resources",
+    "image": "https://images.unsplash.com/photo-1500673922987-e212871fec22?w=600&h=400&fit=crop",
+    "youtubeId": "dQw4w9WgXcQ",
+    "tags": ["Healthcare", "Community", "Next.js"],
+    "creator": "Jordan Kim",
+    "instagram": "jordan_builds",
+    "github": "jordankim/teen-health"
+  }
+]

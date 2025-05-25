@@ -1,0 +1,57 @@
+
+[
+  {
+    "id": "ai",
+    "name": "AI Guild",
+    "emoji": "🤖",
+    "mission": "Building the future with artificial intelligence",
+    "description": "From machine learning models to chatbots, we're pushing the boundaries of what's possible with AI.",
+    "discordLink": "https://discord.gg/ai-guild",
+    "memberCount": 247
+  },
+  {
+    "id": "mun",
+    "name": "MUN Guild", 
+    "emoji": "🌍",
+    "mission": "Solving global challenges through debate and diplomacy",
+    "description": "Model United Nations enthusiasts discussing world affairs and honing negotiation skills.",
+    "discordLink": "https://discord.gg/mun-guild",
+    "memberCount": 189
+  },
+  {
+    "id": "nocode",
+    "name": "No-Code Guild",
+    "emoji": "⚡",
+    "mission": "Building without barriers",
+    "description": "Creating amazing apps and websites using no-code tools like Bubble, Webflow, and Zapier.",
+    "discordLink": "https://discord.gg/nocode-guild", 
+    "memberCount": 156
+  },
+  {
+    "id": "design",
+    "name": "Design Guild",
+    "emoji": "🎨",
+    "mission": "Crafting beautiful digital experiences",
+    "description": "UI/UX designers creating stunning interfaces and user experiences that people love.",
+    "discordLink": "https://discord.gg/design-guild",
+    "memberCount": 203
+  },
+  {
+    "id": "content",
+    "name": "Content Guild",
+    "emoji": "✍️",
+    "mission": "Storytelling that moves the world",
+    "description": "Writers, podcasters, and video creators sharing stories that inspire and educate.",
+    "discordLink": "https://discord.gg/content-guild",
+    "memberCount": 134
+  },
+  {
+    "id": "marketing",
+    "name": "Marketing Guild",
+    "emoji": "📈",
+    "mission": "Growing ideas into movements",
+    "description": "Digital marketers learning growth hacking, social media, and community building.",
+    "discordLink": "https://discord.gg/marketing-guild",
+    "memberCount": 178
+  }
+]
